@@ -1,6 +1,12 @@
 {% extends 'entete_de_page.html' %}
 {% block titre %} page d'articles {% endblock %}
 {% block contenu %}
-<h1>pas d'article pour le moment</h1>
+    <h1>pas d'article pour  moment</h1>
+    {% for article in articles %}
+        <h1>{{ article.titre}}</h1>
+        <h3>{{ article.contenu}}</h3>
+        <span>{{ article.date}}</span>        
+    {% endfor %}
+
 {% endblock %}
     
